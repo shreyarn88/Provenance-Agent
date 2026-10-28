@@ -77,7 +77,7 @@ Python · Scrapy · MongoDB · PostgreSQL · W3C PROV-O · OpenAI-compatible LLM
 **Requirements:** Python 3.11+, MongoDB and PostgreSQL running locally with the `thesis_db` data, and a free [Groq](https://console.groq.com) API key (or [Ollama](https://ollama.com) for a local model).
 
 ```bash
-git clone https://github.com/shreyarn88/provenance-agent.git
+git clone https://github.com/shreyarn88/Provenance-Agent.git
 cd provenance-agent
 python3 -m venv venv && source venv/bin/activate
 pip install -r requirements.txt
