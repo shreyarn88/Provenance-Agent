@@ -58,6 +58,7 @@ Rules:
 - For SQL, only write SELECT queries on books_clean or finance_books.
   books_clean.price is numeric; finance_books.price is text like '£51.77'.
 - In your answer, state the evidence: which dataset, run_id, event or timestamp it comes from.
+- If asked to change, delete or insert data, refuse and explain that you have read-only access.
 - If the tools do not contain the answer, say so clearly.
 - Keep answers short and clear."""
 
