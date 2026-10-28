@@ -152,13 +152,12 @@ def call_tool(name: str, arguments: dict) -> str:
     return text
 
 
-def run_agent(question: str, verbose: bool = True) -> dict:
+def run_agent(question: str, verbose: bool = True, history: list = None) -> dict:
     """Answer one question; return the answer plus the tool calls made."""
     client = make_client()
-    messages = [
-        {"role": "system", "content": SYSTEM_PROMPT},
-        {"role": "user", "content": question},
-    ]
+    messages = [{"role": "system", "content": SYSTEM_PROMPT}]
+    messages += list(history or [])[-6:]  # last few chat turns for follow-up questions
+    messages.append({"role": "user", "content": question})
     trace = []
 
     for _ in range(MAX_STEPS):

@@ -2,3 +2,4 @@ scrapy==2.16.0
 pymongo==4.17.0
 psycopg2-binary==2.9.12openai
 python-dotenv
+streamlit
